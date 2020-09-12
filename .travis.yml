@@ -19,5 +19,5 @@ script:
   - npm run lint:all
   - ng test --watch=false
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_UPLOAD_TOKEN
   - ng deploy --base-href=https://decrises.github.io/bookmark-management-dashboard/ --message="docs auto generated commit"

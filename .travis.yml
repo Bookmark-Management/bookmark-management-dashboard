@@ -1,0 +1,30 @@
+language: node_js
+env:
+  - NODE_VERSION=12 CC=clang CXX=clang++
+before_install:
+  - nvm install $NODE_VERSION
+  - pip install --user codecov
+branches:
+  only:
+    - master
+    - codecov
+addons:
+  chrome: stable
+before_script:
+  - yarn global add @angular/cli
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script:
+  - npm run lint:all
+  - ng test --watch=false
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t e9e2b4a6-c373-44d1-b5d1-bef3aa363256
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $TRAVIS_DEPLOYMENT_KEY # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: codecov

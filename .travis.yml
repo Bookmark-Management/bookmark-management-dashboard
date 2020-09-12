@@ -1,0 +1,23 @@
+language: node_js
+env:
+  - NODE_VERSION=12 CC=clang CXX=clang++
+before_install:
+  - nvm install $NODE_VERSION
+  - pip install --user codecov
+branches:
+  only:
+    - master
+addons:
+  chrome: stable
+before_script:
+  - yarn global add @angular/cli
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script:
+  - npm run lint:all
+  - ng test --watch=false
+after_success:
+  - codecov
+  - ng deploy --base-href=https://decrises.github.io/bookmark-management-dashboard/ --message="docs auto generated commit"

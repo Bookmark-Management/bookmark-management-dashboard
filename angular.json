@@ -128,7 +128,7 @@
       "prefix": "create",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/home",
             "index": "projects/home/src/index.html",
@@ -138,7 +138,13 @@
             "aot": true,
             "assets": ["projects/home/src/favicon.ico", "projects/home/src/assets"],
             "styles": ["projects/home/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "projects/home/build/extra-webpack.config.js",
+              "mergeStrategies": {
+                "externals": "replace"
+              }
+            }
           },
           "configurations": {
             "production": {

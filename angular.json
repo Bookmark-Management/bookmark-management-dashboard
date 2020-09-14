@@ -203,7 +203,8 @@
             "karmaConfig": "projects/home/karma.conf.js",
             "assets": ["projects/home/src/favicon.ico", "projects/home/src/assets"],
             "styles": ["projects/home/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true
           }
         },
         "lint": {

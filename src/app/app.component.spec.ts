@@ -19,6 +19,6 @@ describe('AppComponent', () => {
   it(`should have as title 'bookmark-management-dashboard'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('bookmark-management-dashboard');
+    expect(app.title).toEqual('Bookmark Management Dashboard');
   });
 });

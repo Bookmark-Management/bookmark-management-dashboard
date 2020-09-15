@@ -138,7 +138,7 @@
             "tsConfig": "projects/home/tsconfig.app.json",
             "aot": true,
             "assets": ["projects/home/src/favicon.ico", "projects/home/src/assets"],
-            "styles": ["src/styles/bmd.scss"],
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles/bmd.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "projects/home/build/extra-webpack.config.js",

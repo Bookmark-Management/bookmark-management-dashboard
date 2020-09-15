@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bookmark-management-dashboard:build"
+            "browserTarget": "bookmark-management-dashboard:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -180,7 +181,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "home:build"
+            "browserTarget": "home:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

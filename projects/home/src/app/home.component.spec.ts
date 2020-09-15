@@ -21,4 +21,16 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should show cards when click on 'Go Back' button", () => {
+    expect(component).toBeTruthy();
+    component.showCardsPage();
+    expect(component.showCards).toBeTrue();
+  });
+
+  it("should show create tiny url page when click on 'Create new tiny URL' button", () => {
+    expect(component).toBeTruthy();
+    component.createTinyURL();
+    expect(component.showCards).toBeFalse();
+  });
 });

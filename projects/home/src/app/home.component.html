@@ -1,1 +1,21 @@
-<button class="btn btn-primary">Lazily loaded home</button>
+<section class="wrapper landing">
+  <div class="row action-buttons">
+    <ng-container *ngIf="showCards">
+      <div class="box total-count">Total tiny url: {{ cards.length }}</div>
+      <div class="box search-container">
+        <div class="input-group">
+          <input name=" " type="text" class="form-control" placeholder="Search by title" [(ngModel)]="searchText" />
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <span class="ico-search"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button (click)="createTinyURL()" type="button" class="box btn-box">Create new tiny URL</button>
+    </ng-container>
+    <ng-container *ngIf="!showCards">
+      <button (click)="showCardsPage()" type="button" class="box btn-box">Go Back</button>
+    </ng-container>
+  </div>
+</section>

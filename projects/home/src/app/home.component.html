@@ -1,0 +1,33 @@
+<section class="wrapper landing">
+  <div class="row action-buttons">
+    <ng-container *ngIf="showCards">
+      <div class="box total-count">Total tiny url: {{ cards.length }}</div>
+      <div class="box search-container">
+        <div class="input-group">
+          <input name=" " type="text" class="form-control" placeholder="Search by title" [(ngModel)]="searchText" />
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <span class="ico-search"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button (click)="createTinyURL()" type="button" class="box btn-box">Create new tiny URL</button>
+    </ng-container>
+    <ng-container *ngIf="!showCards">
+      <button (click)="showCardsPage()" type="button" class="box btn-box">Go Back</button>
+    </ng-container>
+  </div>
+
+  <div *ngIf="showCards && cardsLoaded && zeroCards" class="row">
+    <app-zero-page [message]="zeroCardMessage"></app-zero-page>
+  </div>
+
+  <div *ngIf="!showCards">
+    <app-card-generator (backToList)="showCardsPage()"></app-card-generator>
+  </div>
+
+  <ngx-spinner bdColor="rgba(49,49,50,0.33)" size="medium" color="#ffffff" type="square-jelly-box" [fullScreen]="true"
+    ><p style="color: white">Loading...</p></ngx-spinner
+  >
+</section>

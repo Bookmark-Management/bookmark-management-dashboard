@@ -1,0 +1,46 @@
+/* action-button */
+
+.box {
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #064279;
+  text-transform: uppercase;
+}
+
+.btn-box {
+  border: 1px solid #064279;
+  background-color: #064279;
+  font-weight: unset;
+  font-size: 1rem;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.btn-box:hover,
+.btn-box:active {
+  background-color: #fff;
+  color: #064279;
+}
+
+.action-buttons {
+  margin-bottom: 1%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+}
+
+/* icons */
+
+.ico-search {
+  background: url(../assets/images/search-image.svg) no-repeat 0 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 32px;
+  top: 8px;
+  z-index: 2;
+  cursor: pointer;
+}

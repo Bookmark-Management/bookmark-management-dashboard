@@ -1,0 +1,135 @@
+{
+  "tiny-url": {
+    "longurl": "https://hh",
+    "expireDate": "2020-09-07T12:29:18.000Z"
+  },
+  "cards": [
+    {
+      "id": 1,
+      "title": "Spring Batch",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A Spring Batch tutorials for beginners in 28 minutes"
+    },
+    {
+      "id": 2,
+      "title": "Spring Boot",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A Tutorial to understand the concept of Spring Boot, Spring MVC and Spring in 28 minutes"
+    },
+    {
+      "id": 3,
+      "title": "HTML and CSS",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A tutorial to learn HTML and CSS and all it's related concepts."
+    },
+    {
+      "id": 4,
+      "title": "Apache Solr",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A Youtube video lecture to understand the concept of Apache Solr."
+    },
+    {
+      "id": 5,
+      "title": "System Design",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A github project to understand the system design with all the actual implementation and architecture design."
+    },
+    {
+      "id": 6,
+      "title": "Python Virtual Environment",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A tutorial to understand the need of virtual environment in Python and how to manage in MacOS"
+    },
+    {
+      "id": 7,
+      "title": "React",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "An official blog to chekout all the usefull tutorials available for React."
+    },
+    {
+      "id": 8,
+      "title": "Docker",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "An official manual to understand docker for MacOS users."
+    },
+    {
+      "id": 9,
+      "title": "MongoDB",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A tutorialspoint tutorial to understand the MongoDB concepts."
+    },
+    {
+      "id": 10,
+      "title": "Hadoop",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A tutorial to understand Hadoop and all it's related concepts on Google Cloud with hands on experience."
+    },
+    {
+      "id": 11,
+      "title": "NPTEL",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A platform provided by Indian MHRD to all students to learn new skills via different courses provided by top Indian Institutes."
+    },
+    {
+      "id": 12,
+      "title": "Raspberry PI",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A complete tutorial for Raspberry Pi in Octave."
+    },
+    {
+      "id": 13,
+      "title": "Coding Bat",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "A platform to practice all your coding skills."
+    },
+    {
+      "id": 14,
+      "title": "Jenkins",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "createdBy": "Pratik Kumar",
+      "icon": "../../assets/images/sg_logo.png",
+      "image": "../../assets/images/blank_image.jpeg",
+      "description": "Installing Jenkins on macOS. Step by step process to configure Jenkins on local machine."
+    }
+  ],
+  "zero-cards": []
+}

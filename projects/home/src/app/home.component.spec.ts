@@ -5,16 +5,20 @@ import { BookmarkService } from '../../../../src/app/shared/services/bookmark.se
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home.module';
 import { Card } from '../../../../src/app/shared/models/card';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
+import { NGXLogger } from 'ngx-logger';
+import { LoggerTestingModule, NGXLoggerMock } from 'ngx-logger/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
   let bookmarkService: BookmarkService;
+  let logger: NGXLoggerMock;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, HomeModule],
+      imports: [HttpClientModule, HomeModule, LoggerTestingModule, BrowserAnimationsModule],
     }).compileComponents();
   });
 
@@ -22,20 +26,21 @@ describe('HomeComponent', () => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     bookmarkService = fixture.debugElement.injector.get(BookmarkService);
+    logger = fixture.debugElement.injector.get(NGXLogger);
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should show cards when click on 'Go Back' button", () => {
+  it('should show cards when click on *Go Back* button', () => {
     expect(component).toBeTruthy();
     fixture.detectChanges();
     component.showCardsPage();
     expect(component.showCards).toBeTrue();
   });
 
-  it("should show create tiny url page when click on 'Create new tiny URL' button", () => {
+  it('should show create tiny url page when click on *Create new tiny URL* button', () => {
     expect(component).toBeTruthy();
     fixture.detectChanges();
     component.createTinyURL();
@@ -68,5 +73,14 @@ describe('HomeComponent', () => {
     expect(component.cardsLoaded).toBeTrue();
     expect(component.zeroCards).toBeTrue();
     expect(JSON.stringify(component.cards)).toEqual(JSON.stringify(zeroCards));
+  });
+
+  it('should log errors when get cards from RESTful api request fails', () => {
+    const error = new Error('Unable to Fetch Cards');
+    spyOn(bookmarkService, 'getTinyUrlsCards').and.returnValue(throwError(error));
+    spyOn(logger, 'error').and.callThrough();
+    fixture.detectChanges();
+    expect(bookmarkService.getTinyUrlsCards).toHaveBeenCalledTimes(1);
+    expect(logger.error).toHaveBeenCalledWith('Unable to Fetch Cards', error);
   });
 });

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../../../src/app/shared/models/card';
 import { BookmarkService } from '../../../../src/app/shared/services/bookmark.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { NGXLogger } from 'ngx-logger';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'create-home',
@@ -15,7 +18,12 @@ export class HomeComponent implements OnInit {
   zeroCardMessage: string;
   searchText: string;
 
-  constructor(private bookmarkService: BookmarkService) {}
+  constructor(
+    private bookmarkService: BookmarkService,
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService,
+    private logger: NGXLogger
+  ) {}
 
   ngOnInit(): void {
     this.cardsLoaded = false;
@@ -23,13 +31,22 @@ export class HomeComponent implements OnInit {
     this.zeroCards = true;
     this.zeroCardMessage = 'There is no tiny URLs available.';
     this.cards = [];
-    this.bookmarkService.getTinyUrlsCards().subscribe((res: Card[]) => {
-      this.cardsLoaded = true;
-      this.cards = res;
-      if (this.cards.length > 0) {
-        this.zeroCards = false;
+    this.spinner.show();
+    this.bookmarkService.getTinyUrlsCards().subscribe(
+      (res: Card[]) => {
+        this.spinner.hide();
+        this.cardsLoaded = true;
+        this.cards = res;
+        if (this.cards.length > 0) {
+          this.zeroCards = false;
+        }
+      },
+      (error) => {
+        this.spinner.hide();
+        this.toastr.error('Error', 'Unable to Fetch Cards');
+        this.logger.error('Unable to Fetch Cards', error);
       }
-    });
+    );
   }
 
   createTinyURL(): void {

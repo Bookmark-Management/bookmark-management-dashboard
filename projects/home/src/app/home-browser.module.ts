@@ -5,9 +5,10 @@ import { environment } from '../environments/environment';
 import { createCustomElement } from '@angular/elements';
 import { HomeModule } from './home.module';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  imports: [BrowserModule, HomeModule, RouterModule.forRoot([])],
+  imports: [BrowserModule, BrowserAnimationsModule, HomeModule, RouterModule.forRoot([])],
   bootstrap: environment.production ? [] : [HomeComponent],
 })
 export class HomeBrowserModule {

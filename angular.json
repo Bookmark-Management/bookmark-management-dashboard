@@ -25,7 +25,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles/bmd.scss"],
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/ngx-toastr/toastr.css", "src/styles/bmd.scss"],
             "scripts": ["./node_modules/jquery/dist/jquery.js", "./node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
@@ -138,7 +138,7 @@
             "tsConfig": "projects/home/tsconfig.app.json",
             "aot": true,
             "assets": ["projects/home/src/favicon.ico", "projects/home/src/assets"],
-            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles/bmd.scss"],
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/ngx-toastr/toastr.css", "src/styles/bmd.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "projects/home/build/extra-webpack.config.js",

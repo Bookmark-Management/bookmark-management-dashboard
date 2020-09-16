@@ -85,14 +85,20 @@
               </div>
             </div>
 
-            <div class="custom-file my-4">
-              <input type="file" class="custom-file-input" (change)="changeImageFile($event)" id="uploadImage" />
-              <label class="custom-file-label" for="uploadImage" #uploadImageLabel>Upload Image</label>
+            <div class="form-group">
+              <label>Upload Image</label>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" (change)="changeImageFile($event)" id="uploadImage" />
+                <label class="custom-file-label" for="uploadImage" #uploadImageLabel></label>
+              </div>
             </div>
 
-            <div class="custom-file my-4">
-              <input type="file" class="custom-file-input" (change)="changeLogoFile($event)" id="uploadLogo" />
-              <label class="custom-file-label" for="uploadLogo" #uploadLogoLabel>Upload Logo</label>
+            <div class="form-group">
+              <label>Upload Logo</label>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" (change)="changeLogoFile($event)" id="uploadLogo" />
+                <label class="custom-file-label" for="uploadLogo" #uploadLogoLabel></label>
+              </div>
             </div>
 
             <div class="form-group action-btn">

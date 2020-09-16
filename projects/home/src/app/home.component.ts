@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../../../src/app/shared/models/card';
+import { BookmarkService } from '../../../../src/app/shared/services/bookmark.service';
 
 @Component({
   selector: 'create-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   zeroCardMessage: string;
   searchText: string;
 
-  constructor() {}
+  constructor(private bookmarkService: BookmarkService) {}
 
   ngOnInit(): void {
     this.cardsLoaded = false;
@@ -22,6 +23,13 @@ export class HomeComponent implements OnInit {
     this.zeroCards = true;
     this.zeroCardMessage = 'There is no tiny URLs available.';
     this.cards = [];
+    this.bookmarkService.getTinyUrlsCards().subscribe((res: Card[]) => {
+      this.cardsLoaded = true;
+      this.cards = res;
+      if (this.cards.length > 0) {
+        this.zeroCards = false;
+      }
+    });
   }
 
   createTinyURL(): void {

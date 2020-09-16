@@ -130,5 +130,6 @@
       "image": "../../assets/images/blank_image.jpeg",
       "description": "Installing Jenkins on macOS. Step by step process to configure Jenkins on local machine."
     }
-  ]
+  ],
+  "zero-cards": []
 }

@@ -1,0 +1,112 @@
+<section>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 mx-auto">
+      <div class="form-container p-4">
+        <ng-container *ngIf="step == 1">
+          <div class="form-title">Generate tiny URL</div>
+          <form #urlForm="ngForm" (ngSubmit)="urlForm.form.valid && onGenerateURL(urlForm)">
+            <div class="form-group">
+              <label>Enter long URL</label>
+              <textarea
+                type="text"
+                name="longurl"
+                class="form-control"
+                [(ngModel)]="tinyUrlRequest.longUrl"
+                #longurl="ngModel"
+                [ngClass]="{ 'is-invalid': urlForm.submitted && longurl.invalid }"
+                required
+                pattern="^(https?|chrome):\/\/[^\s$.?#].[^\s]*$"
+                rows="5"
+              ></textarea>
+              <div class="invalid-feedback" *ngIf="urlForm.submitted && longurl.invalid">
+                <p *ngIf="longurl.errors.required">URL is required</p>
+                <p *ngIf="longurl.errors.pattern">URL is invalid</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Expiry Date</label>
+              <input
+                type="text"
+                placeholder="Expiry Date"
+                name="expireDate"
+                class="form-control"
+                [(ngModel)]="tinyUrlRequest.expireDate"
+                bsDatepicker
+              />
+            </div>
+
+            <div class="form-group action-btn">
+              <button class="btn btn-box btn-block">
+                <span *ngIf="isSubmitting">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Genarating...
+                </span>
+                <span *ngIf="!isSubmitting"> Generate </span>
+              </button>
+            </div>
+          </form>
+        </ng-container>
+        <ng-container *ngIf="step == 2">
+          <div class="form-title">Create Card for tiny URL</div>
+          <form #cardForm="ngForm" (ngSubmit)="cardForm.form.valid && onSubmit(cardForm)">
+            <div class="text-md text-medium">Tiny URL</div>
+            <div class="p-2 my-3 text-muted border text-medium">{{ tinyUrl }}</div>
+
+            <div class="form-group">
+              <label>Enter title</label>
+              <input
+                type="text"
+                name="title"
+                class="form-control"
+                [(ngModel)]="card.title"
+                #title="ngModel"
+                [ngClass]="{ 'is-invalid': cardForm.submitted && title.invalid }"
+                required
+              />
+              <div class="invalid-feedback" *ngIf="cardForm.submitted && title.invalid">
+                <p *ngIf="title.errors.required">Title is required</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Enter short Description</label>
+              <textarea
+                class="form-control"
+                name="desc"
+                [(ngModel)]="card.description"
+                #desc="ngModel"
+                [ngClass]="{ 'is-invalid': cardForm.submitted && desc.invalid }"
+                desc
+                required
+                rows="5"
+              ></textarea>
+              <div *ngIf="cardForm.submitted && desc.invalid" class="invalid-feedback">
+                <div *ngIf="desc.errors.required">Description is required</div>
+              </div>
+            </div>
+
+            <div class="custom-file my-4">
+              <input type="file" class="custom-file-input" (change)="changeImageFile($event)" id="uploadImage" />
+              <label class="custom-file-label" for="uploadImage" #uploadImageLabel>Upload Image</label>
+            </div>
+
+            <div class="custom-file my-4">
+              <input type="file" class="custom-file-input" (change)="changeLogoFile($event)" id="uploadLogo" />
+              <label class="custom-file-label" for="uploadLogo" #uploadLogoLabel>Upload Logo</label>
+            </div>
+
+            <div class="form-group action-btn">
+              <button (click)="onSkip()" type="button" class="btn btn-secondary w-25">Skip</button>
+              <button type="submit" class="btn btn-success w-25">
+                <span *ngIf="isSubmitting">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...
+                </span>
+                <span *ngIf="!isSubmitting">Add Card</span>
+              </button>
+            </div>
+          </form>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>

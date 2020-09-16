@@ -9,9 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { CardGeneratorComponent } from '../../../../src/app/shared/components/card-generator/card.generator.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
-  declarations: [HomeComponent, ZeroPageComponent],
+  declarations: [HomeComponent, ZeroPageComponent, CardGeneratorComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -19,6 +21,7 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     HttpClientModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     LoggerModule.forRoot({ level: NgxLoggerLevel.INFO }),
   ],
   exports: [HomeComponent],

@@ -9,6 +9,7 @@ import { ManageGroupsModule } from './manage-groups.module';
 import { LoggerTestingModule, NGXLoggerMock } from 'ngx-logger/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NGXLogger } from 'ngx-logger';
+import { RouterModule } from '@angular/router';
 
 describe('ManageGroupsComponent', () => {
   let component: ManageGroupsComponent;
@@ -18,7 +19,7 @@ describe('ManageGroupsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, ManageGroupsModule, LoggerTestingModule, BrowserAnimationsModule],
+      imports: [HttpClientModule, ManageGroupsModule, LoggerTestingModule, BrowserAnimationsModule, RouterModule.forRoot([])],
     }).compileComponents();
   });
 

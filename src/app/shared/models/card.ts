@@ -7,6 +7,7 @@ export class Card {
   public createdBy: string;
   public longUrl: string;
   public shortUrl: string;
+  public groupName: string;
   public owners: Array<string>;
   public tinyCardsCount: number;
   public tinyCards: Array<Card>;

@@ -9,6 +9,9 @@ import { HomeModule } from '../../../home/src/app/home.module';
 import { ToastrModule } from 'ngx-toastr';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CardsModule } from '../../../cards/src/app/cards.module';
+import { CustomPipeModule } from '../../../../src/app/shared/pipes/pipe.module';
 
 @NgModule({
   declarations: [ManageGroupsComponent],
@@ -21,6 +24,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgxSpinnerModule,
     ToastrModule.forRoot(),
     LoggerModule.forRoot({ level: NgxLoggerLevel.INFO }),
+    NgxPaginationModule,
+    CardsModule,
+    CustomPipeModule.forRoot(),
   ],
   exports: [ManageGroupsComponent],
   providers: [BookmarkService],

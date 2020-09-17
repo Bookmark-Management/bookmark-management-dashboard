@@ -14,6 +14,9 @@ export class FilterPipe implements PipeTransform {
     let result;
 
     result = items.filter((it) => {
+      if (it.groupName) {
+        return it.groupName.toLocaleLowerCase().includes(searchText);
+      }
       return it.title.toLocaleLowerCase().includes(searchText);
     });
 

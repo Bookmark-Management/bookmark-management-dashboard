@@ -19,6 +19,27 @@
     </ng-container>
   </div>
 
+  <div *ngIf="showCards && cardsLoaded && !zeroCards" class="row">
+    <div class="row w-100 d-flex flex-row-reverse">
+      <pagination-controls class="my-pagination" responsive="true" (pageChange)="currentPage = $event"> </pagination-controls>
+    </div>
+
+    <div class="w-100">
+      <div class="url-lists">
+        <ng-container *ngFor="let card of cards | paginate: { itemsPerPage: 12, currentPage: currentPage } | appFilter: searchText">
+          <ng-container *ngIf="card != -1; else noCardExist">
+            <create-cards [urlInfo]="card" [isGroup]="true"></create-cards>
+          </ng-container>
+          <ng-template #noCardExist>
+            <div class="w-50 h-300 d-flex justify-content-center align-items-center border mx-auto">
+              <h2>No such group exist</h2>
+            </div>
+          </ng-template>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
   <div *ngIf="showCards && cardsLoaded && zeroCards" class="row">
     <app-zero-page [message]="zeroCardMessage"></app-zero-page>
   </div>

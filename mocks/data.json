@@ -176,8 +176,8 @@
       "groupName": "K2",
       "owner": "Pratik Kumar",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -187,8 +187,8 @@
       "totalCard": 4,
       "groupName": "Trishul",
       "owner": "Pratik Kumar",
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -198,8 +198,8 @@
       "owner": "Pratik Kumar",
       "groupName": "MTR",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -209,8 +209,8 @@
       "owner": "Pratik Kumar",
       "groupName": "LOA",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -220,8 +220,8 @@
       "owner": "Pratik Kumar",
       "groupName": "SIROCCO",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -231,8 +231,8 @@
       "owner": "Pratik Kumar",
       "groupName": "DIR",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -242,8 +242,8 @@
       "owner": "Pratik Kumar",
       "groupName": "FRM",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -253,8 +253,8 @@
       "owner": "Pratik Kumar",
       "groupName": "RPP",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -264,8 +264,8 @@
       "owner": "Pratik Kumar",
       "groupName": "OSD",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -275,8 +275,8 @@
       "owner": "Pratik Kumar",
       "groupName": "LAI",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -286,8 +286,8 @@
       "owner": "Pratik Kumar",
       "groupName": "TRA",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -297,8 +297,8 @@
       "owner": "Pratik Kumar",
       "groupName": "E3F",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -308,8 +308,8 @@
       "owner": "Pratik Kumar",
       "groupName": "TOMCAT",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     },
     {
@@ -319,8 +319,8 @@
       "owner": "Pratik Kumar",
       "groupName": "SAFE",
       "totalCard": 4,
-      "icon": "../../../assets/images/logo.png",
-      "image": "../../../assets/images/blank_image.jpeg",
+      "icon": "../../../assets/images/sg-logo.png",
+      "image": "../../../assets/images/blank-image.jpeg",
       "description": "An SG GSC Group."
     }
   ]

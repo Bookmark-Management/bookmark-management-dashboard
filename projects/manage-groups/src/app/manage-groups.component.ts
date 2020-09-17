@@ -17,6 +17,7 @@ export class ManageGroupsComponent implements OnInit {
   zeroCards: boolean;
   zeroCardMessage: string;
   searchText: any;
+  currentPage: string | number;
 
   constructor(
     private bookmarkService: BookmarkService,

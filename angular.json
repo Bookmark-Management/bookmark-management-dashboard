@@ -439,7 +439,8 @@
             "karmaConfig": "projects/manage-groups/karma.conf.js",
             "assets": ["projects/manage-groups/src/favicon.ico", "projects/manage-groups/src/assets"],
             "styles": ["projects/manage-groups/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true
           }
         },
         "lint": {

@@ -364,7 +364,7 @@
       "prefix": "manage",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/manage-groups",
             "index": "projects/manage-groups/src/index.html",
@@ -374,7 +374,13 @@
             "aot": true,
             "assets": ["projects/manage-groups/src/favicon.ico", "projects/manage-groups/src/assets"],
             "styles": ["projects/manage-groups/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "projects/manage-groups/build/extra-webpack.config.js",
+              "mergeStrategies": {
+                "externals": "replace"
+              }
+            }
           },
           "configurations": {
             "production": {

@@ -18,4 +18,8 @@
       <button (click)="showGroupsPage()" type="button" class="box btn-box">Go Back</button>
     </ng-container>
   </div>
+
+  <div *ngIf="showCards && cardsLoaded && zeroCards" class="row">
+    <app-zero-page [message]="zeroCardMessage"></app-zero-page>
+  </div>
 </section>

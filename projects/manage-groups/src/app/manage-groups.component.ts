@@ -21,7 +21,7 @@ export class ManageGroupsComponent implements OnInit {
     this.cardsLoaded = false;
     this.showCards = true;
     this.zeroCards = true;
-    this.zeroCardMessage = 'There is no bookmarked added';
+    this.zeroCardMessage = 'There is no groups created yet';
     this.cards = [];
 
     this.bookmarkService.getGroupCards().subscribe((res: Card[]) => {

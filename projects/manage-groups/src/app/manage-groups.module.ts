@@ -12,9 +12,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CardsModule } from '../../../cards/src/app/cards.module';
 import { CustomPipeModule } from '../../../../src/app/shared/pipes/pipe.module';
+import { CreateGroupComponent } from './features/create-group/create-group.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
-  declarations: [ManageGroupsComponent],
+  declarations: [ManageGroupsComponent, CreateGroupComponent],
   imports: [
     CommonModule,
     ManageGroupsRoutingModule,
@@ -27,6 +29,7 @@ import { CustomPipeModule } from '../../../../src/app/shared/pipes/pipe.module';
     NgxPaginationModule,
     CardsModule,
     CustomPipeModule.forRoot(),
+    NgSelectModule,
   ],
   exports: [ManageGroupsComponent],
   providers: [BookmarkService],

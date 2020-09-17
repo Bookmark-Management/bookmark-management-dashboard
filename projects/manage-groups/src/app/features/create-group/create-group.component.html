@@ -1,0 +1,94 @@
+<section>
+  <div class="row">
+    <div class="form-container col-md-6 col-lg-6 col-sm-12 mx-auto p-3 border rounded bg-white">
+      <div class="form-title">Create your Group</div>
+      <form #cardForm="ngForm" (ngSubmit)="cardForm.form.valid && onCreateCard(cardForm)">
+        <div class="form-group">
+          <label>Enter title</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            [(ngModel)]="groupCard.title"
+            #title="ngModel"
+            [ngClass]="{ 'is-invalid': cardForm.submitted && title.invalid }"
+            required
+          />
+          <div class="invalid-feedback" *ngIf="cardForm.submitted && title.invalid">
+            <p *ngIf="title.errors.required">Title is required</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Enter short Description</label>
+          <textarea
+            class="form-control"
+            name="desc"
+            [(ngModel)]="groupCard.description"
+            #desc="ngModel"
+            [ngClass]="{ 'is-invalid': cardForm.submitted && desc.invalid }"
+            desc
+            required
+            rows="5"
+          ></textarea>
+          <div *ngIf="cardForm.submitted && desc.invalid" class="invalid-feedback">
+            <div *ngIf="desc.errors.required">Description is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Image</label>
+          <div class="custom-file">
+            <input
+              type="file"
+              class="custom-file-input"
+              name="image"
+              [(ngModel)]="groupCard.image"
+              (change)="changeImageFile($event)"
+              id="customFileForImage"
+            />
+            <label class="custom-file-label" for="customFileForImage" #uploadImageLabel></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Logo</label>
+          <div class="custom-file">
+            <input
+              type="file"
+              class="custom-file-input"
+              name="icon"
+              [(ngModel)]="groupCard.icon"
+              (change)="changeLogoFile($event)"
+              id="customFileForLogo"
+            />
+            <label class="custom-file-label" for="customFileForLogo" #uploadLogoLabel></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Select tiny url(s)</label>
+          <ng-select
+            [items]="dropdownList"
+            bindLabel="title"
+            bindValue="id"
+            [multiple]="true"
+            placeholder="Select cities"
+            name="tinyCards"
+            [(ngModel)]="groupCard.tinyCards"
+          >
+          </ng-select>
+        </div>
+
+        <div class="form-group action-btn">
+          <button type="submit" class="btn btn-success w-100">
+            <span *ngIf="isSubmitting">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Creating ...
+            </span>
+            <span *ngIf="!isSubmitting"> Create group </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

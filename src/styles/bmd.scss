@@ -1,3 +1,4 @@
+@import '~@ng-select/ng-select/themes/default.theme.css';
 /* action-button */
 
 .box {
@@ -43,4 +44,26 @@
   top: 8px;
   z-index: 2;
   cursor: pointer;
+}
+
+/* form style */
+.form-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  .form-title {
+    padding: 1%;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #064279;
+    border-bottom: 1px solid #064279;
+    margin-bottom: 3%;
+  }
+
+  .action-btn {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
 }

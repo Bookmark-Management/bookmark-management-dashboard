@@ -24,4 +24,6 @@ export class BookmarkService {
   getGroupCards(): Observable<Card[]> {
     return this.http.get<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/fetch/group/cards`);
   }
+
+  createGroupCard(card: any): void {}
 }

@@ -19,6 +19,10 @@
     </ng-container>
   </div>
 
+  <div *ngIf="!showCards">
+    <manage-create-group (backToList)="showGroupsPage()"></manage-create-group>
+  </div>
+
   <div *ngIf="showCards && cardsLoaded && !zeroCards" class="row">
     <div class="row w-100 d-flex flex-row-reverse">
       <pagination-controls class="my-pagination" responsive="true" (pageChange)="currentPage = $event"> </pagination-controls>

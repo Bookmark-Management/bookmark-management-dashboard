@@ -351,6 +351,115 @@
           }
         }
       }
+    },
+    "manage-groups": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/manage-groups",
+      "sourceRoot": "projects/manage-groups/src",
+      "prefix": "manage",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/manage-groups",
+            "index": "projects/manage-groups/src/index.html",
+            "main": "projects/manage-groups/src/main.ts",
+            "polyfills": "projects/manage-groups/src/polyfills.ts",
+            "tsConfig": "projects/manage-groups/tsconfig.app.json",
+            "aot": true,
+            "assets": ["projects/manage-groups/src/favicon.ico", "projects/manage-groups/src/assets"],
+            "styles": ["projects/manage-groups/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/manage-groups/src/environments/environment.ts",
+                  "with": "projects/manage-groups/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "manage-groups:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "manage-groups:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "manage-groups:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/manage-groups/src/test.ts",
+            "polyfills": "projects/manage-groups/src/polyfills.ts",
+            "tsConfig": "projects/manage-groups/tsconfig.spec.json",
+            "karmaConfig": "projects/manage-groups/karma.conf.js",
+            "assets": ["projects/manage-groups/src/favicon.ico", "projects/manage-groups/src/assets"],
+            "styles": ["projects/manage-groups/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/manage-groups/tsconfig.app.json",
+              "projects/manage-groups/tsconfig.spec.json",
+              "projects/manage-groups/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/manage-groups/e2e/protractor.conf.js",
+            "devServerTarget": "manage-groups:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "manage-groups:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "bookmark-management-dashboard"

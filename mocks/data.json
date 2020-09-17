@@ -3,7 +3,7 @@
     "longurl": "https://hh",
     "expireDate": "2020-09-07T12:29:18.000Z"
   },
-  "cards": [
+  "urlCards": [
     {
       "id": 1,
       "title": "Spring Batch",
@@ -167,5 +167,161 @@
       "description": "Installing Jenkins on macOS. Step by step process to configure Jenkins on local machine."
     }
   ],
-  "zero-cards": []
+  "zero-cards": [],
+  "groupCards": [
+    {
+      "id": 1,
+      "title": "lsdhfg asnmvfs",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "groupName": "K2",
+      "owner": "Pratik Kumar",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 2,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "totalCard": 4,
+      "groupName": "Trishul",
+      "owner": "Pratik Kumar",
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 3,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "MTR",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 4,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "LOA",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 5,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "SIROCCO",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 6,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "DIR",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 7,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "FRM",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 8,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "RPP",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 9,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "OSD",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 10,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "LAI",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 11,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "TRA",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 12,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "E3F",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 13,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "TOMCAT",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    },
+    {
+      "id": 14,
+      "title": "Sample",
+      "createdDate": "2020-09-06T20:14:29.000Z",
+      "owner": "Pratik Kumar",
+      "groupName": "SAFE",
+      "totalCard": 4,
+      "icon": "../../../assets/images/logo.png",
+      "image": "../../../assets/images/blank_image.jpeg",
+      "description": "An SG GSC Group."
+    }
+  ]
 }

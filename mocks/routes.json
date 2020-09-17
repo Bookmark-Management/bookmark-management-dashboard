@@ -1,4 +1,5 @@
 {
-  "/api/v1/fetch/cards/": "/cards",
-  "/api/v1/generate/tiny-url/": "/tiny-url"
+  "/api/v1/fetch/tinyurl/cards/": "/urlCards",
+  "/api/v1/generate/tiny-url/": "/tiny-url",
+  "/api/v1/fetch/group/cards/": "/groupCards"
 }

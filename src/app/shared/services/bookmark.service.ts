@@ -12,7 +12,7 @@ export class BookmarkService {
   constructor(private http: HttpClient, private baseService: BaseService) {}
 
   getTinyUrlsCards(): Observable<Card[]> {
-    return this.http.get<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/fetch/cards`);
+    return this.http.get<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/fetch/tinyurl/cards`);
   }
 
   generateTinyUrl(tinyUrlRequest: TinyUrl): Observable<TinyUrl> {
@@ -20,4 +20,8 @@ export class BookmarkService {
   }
 
   createTinyURLCard(): void {}
+
+  getGroupCards(): Observable<Card[]> {
+    return this.http.get<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/fetch/group/cards`);
+  }
 }

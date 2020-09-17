@@ -373,7 +373,7 @@
             "tsConfig": "projects/manage-groups/tsconfig.app.json",
             "aot": true,
             "assets": ["projects/manage-groups/src/favicon.ico", "projects/manage-groups/src/assets"],
-            "styles": ["projects/manage-groups/src/styles.scss"],
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles/bmd.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "projects/manage-groups/build/extra-webpack.config.js",
@@ -416,7 +416,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "manage-groups:build"
+            "browserTarget": "manage-groups:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

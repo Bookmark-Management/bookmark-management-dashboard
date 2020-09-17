@@ -1,1 +1,21 @@
-<p>manage-groups works!</p>
+<section class="wrapper landing">
+  <div class="row action-buttons">
+    <ng-container *ngIf="showCards">
+      <div class="box total-count">Total Groups: {{ cards.length }}</div>
+      <div class="box search-container">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="searchText" />
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <span class="ico-search"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button (click)="createGroup()" type="button" class="box btn-box">Create New Group</button>
+    </ng-container>
+    <ng-container *ngIf="!showCards">
+      <button (click)="showGroupsPage()" type="button" class="box btn-box">Go Back</button>
+    </ng-container>
+  </div>
+</section>

@@ -50,7 +50,7 @@ describe('HomeComponent', () => {
 
   it('should have requested to get cards from RESTful api', () => {
     // Given
-    const cards: Card[] = require('../../../../mocks/data.json').cards;
+    const cards: Card[] = require('../../../../mocks/data.json').urlCards;
     spyOn(bookmarkService, 'getTinyUrlsCards').and.returnValues(of(cards));
     // When
     fixture.detectChanges();

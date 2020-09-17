@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../../../../src/app/shared/models/card';
 import { BookmarkService } from '../../../../src/app/shared/services/bookmark.service';
+import { NGXLogger } from 'ngx-logger';
+import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'manage-groups',
@@ -15,7 +18,12 @@ export class ManageGroupsComponent implements OnInit {
   zeroCardMessage: string;
   searchText: any;
 
-  constructor(private bookmarkService: BookmarkService) {}
+  constructor(
+    private bookmarkService: BookmarkService,
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService,
+    private logger: NGXLogger
+  ) {}
 
   ngOnInit(): void {
     this.cardsLoaded = false;
@@ -23,14 +31,22 @@ export class ManageGroupsComponent implements OnInit {
     this.zeroCards = true;
     this.zeroCardMessage = 'There is no groups created yet';
     this.cards = [];
-
-    this.bookmarkService.getGroupCards().subscribe((res: Card[]) => {
-      this.cardsLoaded = true;
-      this.cards = res;
-      if (this.cards.length > 0) {
-        this.zeroCards = false;
+    this.spinner.show();
+    this.bookmarkService.getGroupCards().subscribe(
+      (res: Card[]) => {
+        this.spinner.hide();
+        this.cardsLoaded = true;
+        this.cards = res;
+        if (this.cards.length > 0) {
+          this.zeroCards = false;
+        }
+      },
+      (error) => {
+        this.spinner.hide();
+        this.toastr.error('Error', 'Unable to Fetch Group Cards');
+        this.logger.error('Unable to Fetch Group Cards', error);
       }
-    });
+    );
   }
 
   createGroup(): void {

@@ -5,9 +5,10 @@ import { createCustomElement } from '@angular/elements';
 import { RouterModule } from '@angular/router';
 import { ManageGroupsModule } from './manage-groups.module';
 import { ManageGroupsComponent } from './manage-groups.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  imports: [BrowserModule, ManageGroupsModule, RouterModule.forRoot([])],
+  imports: [BrowserModule, BrowserAnimationsModule, ManageGroupsModule, RouterModule.forRoot([])],
   bootstrap: environment.production ? [] : [ManageGroupsComponent],
 })
 export class ManageGroupsBrowserModule {

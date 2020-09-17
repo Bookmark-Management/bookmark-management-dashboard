@@ -373,7 +373,7 @@
             "tsConfig": "projects/manage-groups/tsconfig.app.json",
             "aot": true,
             "assets": ["projects/manage-groups/src/favicon.ico", "projects/manage-groups/src/assets"],
-            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles/bmd.scss"],
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "node_modules/ngx-toastr/toastr.css", "src/styles/bmd.scss"],
             "scripts": [],
             "customWebpackConfig": {
               "path": "projects/manage-groups/build/extra-webpack.config.js",

@@ -22,4 +22,8 @@
   <div *ngIf="showCards && cardsLoaded && zeroCards" class="row">
     <app-zero-page [message]="zeroCardMessage"></app-zero-page>
   </div>
+
+  <ngx-spinner bdColor="rgba(49,49,50,0.33)" size="medium" color="#ffffff" type="square-jelly-box" [fullScreen]="true"
+    ><p style="color: white">Loading...</p></ngx-spinner
+  >
 </section>

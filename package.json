@@ -10,6 +10,7 @@
     "build:prod": "ng build --prod --output-hashing none",
     "build:home:element": "ng build home --prod --output-hashing none && node projects/home/build/home-elements-builder.js",
     "build:cards:element": "ng build cards --prod --output-hashing none && node projects/cards/build/cards-elements-builder.js",
+    "build:manage-groups:element": "ng build manage-groups --prod --output-hashing none && node projects/manage-groups/build/manage-groups-elements-builder.js",
     "test": "ng test --watch=false",
     "test:home": "ng test home --watch=false",
     "test:cards": "ng test cards --watch=false",

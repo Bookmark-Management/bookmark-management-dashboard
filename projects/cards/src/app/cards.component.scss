@@ -1,0 +1,116 @@
+/* url card */
+.url-card {
+  display: inline-block;
+  vertical-align: middle;
+  height: 170px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+
+    .url-details {
+      display: flex;
+      height: 80%;
+      .image {
+        width: 75px;
+        height: 75px;
+        border: 1px solid #ccc;
+        img {
+          width: 100%;
+        }
+      }
+      > div {
+        .text {
+          font-size: 1.2rem;
+          font-family: OpenSans-SemiBold, serif;
+          color: #2e2e2e;
+        }
+      }
+      .short-desc {
+        // background-color: #ccc;
+        background-image: linear-gradient(to bottom, #054279 50%, transparent 50%);
+        background-size: 100% 200%;
+        background-position: bottom;
+        transition: background-position 0.5s ease-in-out;
+        // color: #fff;
+        height: 100%;
+        p {
+          line-height: 1.5rem;
+          overflow: scroll;
+        }
+      }
+
+      .short-desc:hover {
+        background-position: top;
+        color: #fff;
+      }
+    }
+    .url-title {
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      .text {
+        font-size: 1.4rem;
+        font-family: OpenSans-SemiBold, serif;
+        width: 80%;
+      }
+      .ico-delete {
+        top: 15px;
+      }
+      .icon {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.url-card-hover:hover .translate-div {
+  padding: 0 !important;
+  height: 100%;
+}
+.url-card-hover:hover .text-on-hover {
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+.url-card-hover:hover .hide-on-hover {
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  height: 0;
+  border: 0;
+  display: none;
+}
+.url-card-hover:hover .show-on-hover,
+.url-card-hover:hover .translate-div-height {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  display: flex;
+}
+
+.url-card-hover:hover .btn.show-on-hover {
+  padding: 0.535rem !important;
+}
+
+.url-card-hover:hover .card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.16);
+}
+
+.show-on-hover {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+.text-on-hover {
+  opacity: 0;
+  transition: all 0.1s ease-in;
+}
+
+/* end url card */

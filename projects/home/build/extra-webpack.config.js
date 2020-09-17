@@ -1,5 +1,5 @@
 module.exports = {
   output: {
-    jsonpFunction: 'webpackJsonpBookmarkManagementDashboard',
+    jsonpFunction: 'webpackJsonpBookmarkManagementDashboardHome',
   },
 };

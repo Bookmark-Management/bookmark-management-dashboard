@@ -3,7 +3,7 @@ const concat = require('concat');
 const del = require('del');
 
 (async function build() {
-  const files = ['./dist/home/runtime.js', './dist/home/polyfills.js', './dist/home/main-es2015.js'];
+  const files = ['./dist/home/runtime.js', './dist/home/polyfills.js', './dist/home/main.js'];
 
   await del(['elements/home.js']);
   await fs.ensureDir('elements');

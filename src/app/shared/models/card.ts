@@ -8,4 +8,6 @@ export class Card {
   public longUrl: string;
   public shortUrl: string;
   public owners: Array<string>;
+  public tinyCardsCount: number;
+  public tinyCards: Array<Card>;
 }

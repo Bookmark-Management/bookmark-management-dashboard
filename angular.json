@@ -252,7 +252,7 @@
       "prefix": "create",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/cards",
             "index": "projects/cards/src/index.html",
@@ -261,8 +261,14 @@
             "tsConfig": "projects/cards/tsconfig.app.json",
             "aot": true,
             "assets": ["projects/cards/src/favicon.ico", "projects/cards/src/assets"],
-            "styles": ["projects/cards/src/styles.scss"],
-            "scripts": []
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles/bmd.scss"],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "projects/cards/build/extra-webpack.config.js",
+              "mergeStrategies": {
+                "externals": "replace"
+              }
+            }
           },
           "configurations": {
             "production": {
@@ -321,7 +327,8 @@
             "karmaConfig": "projects/cards/karma.conf.js",
             "assets": ["projects/cards/src/favicon.ico", "projects/cards/src/assets"],
             "styles": ["projects/cards/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true
           }
         },
         "lint": {

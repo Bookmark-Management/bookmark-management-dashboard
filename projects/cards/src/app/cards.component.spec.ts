@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardsComponent } from './cards.component';
+import { RouterModule } from '@angular/router';
 
 describe('CardsComponent', () => {
   let component: CardsComponent;
@@ -9,6 +10,7 @@ describe('CardsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [CardsComponent],
+      imports: [RouterModule.forRoot([])],
     }).compileComponents();
   });
 
@@ -21,4 +23,6 @@ describe('CardsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // TODO Add test cases here
 });

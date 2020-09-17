@@ -11,6 +11,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 import { CardGeneratorComponent } from '../../../../src/app/shared/components/card-generator/card.generator.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { CardsModule } from '../../../cards/src/app/cards.module';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CustomPipeModule } from '../../../../src/app/shared/pipes/pipe.module';
 
 @NgModule({
   declarations: [HomeComponent, ZeroPageComponent, CardGeneratorComponent],
@@ -23,6 +26,9 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     ToastrModule.forRoot(),
     BsDatepickerModule.forRoot(),
     LoggerModule.forRoot({ level: NgxLoggerLevel.INFO }),
+    CardsModule,
+    NgxPaginationModule,
+    CustomPipeModule.forRoot(),
   ],
   exports: [HomeComponent],
   providers: [BookmarkService],

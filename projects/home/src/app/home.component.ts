@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   zeroCards: boolean;
   zeroCardMessage: string;
   searchText: string;
+  currentPage: string | number;
 
   constructor(
     private bookmarkService: BookmarkService,

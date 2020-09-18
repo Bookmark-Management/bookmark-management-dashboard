@@ -1,6 +1,6 @@
 # Bookmark Management Dashboard [![Build Status](https://travis-ci.com/dECRISES/bookmark-management-dashboard.svg?token=zX2weUHwwiLhJBntsmcM&branch=master)](https://travis-ci.com/github/dECRISES/bookmark-management-dashboard) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0b2450e7edb44a29b905bb8e80c6cb2a)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=dECRISES/bookmark-management-dashboard&utm_campaign=Badge_Grade) [![codecov](https://codecov.io/gh/dECRISES/bookmark-management-dashboard/branch/master/graph/badge.svg?token=QX3TNA431I)](https://codecov.io/gh/dECRISES/bookmark-management-dashboard)
 
-A Dashboard to manage all bookmarks based on various groups.
+A Dashboard to manage all bookmarks based on various groups
 
 ## Development server
 

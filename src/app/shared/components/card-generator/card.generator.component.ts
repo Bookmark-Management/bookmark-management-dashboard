@@ -42,7 +42,7 @@ export class CardGeneratorComponent implements OnInit {
     this.bookmarkService.generateTinyUrl(form.value).subscribe(
       (res: TinyUrl) => {
         this.spinner.hide();
-        this.tinyUrl = `${this.baseService.getBaseUrl()}` + res.tinyUrl;
+        this.tinyUrl = res.tinyUrl ? `${this.baseService.getBaseUrl()}` + res.tinyUrl : form.value.longurl;
         this.isSubmitting = false;
         this.step = 2;
       },
@@ -68,7 +68,20 @@ export class CardGeneratorComponent implements OnInit {
 
   onSubmit(form): void {
     this.logger.info('Creating card with info: ', form);
-    this.bookmarkService.createTinyURLCard();
-    this.backToList.emit(true);
+    form.value.createdBy = 'Pratik Kumar';
+    form.value.createdDate = new Date();
+    this.bookmarkService.createTinyURLCard(form.value).subscribe(
+      (res: TinyUrl) => {
+        this.spinner.hide();
+        this.isSubmitting = false;
+        this.backToList.emit(true);
+      },
+      (error) => {
+        this.spinner.hide();
+        this.toastr.error('Error', 'Unable to Generate Tiny Url');
+        this.logger.error('Unable to Generate Tiny Url', error);
+      }
+    );
+    // this.backToList.emit(true);
   }
 }

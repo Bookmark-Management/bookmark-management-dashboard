@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CreateGroupComponent } from './create-group.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ManageGroupsModule } from '../../manage-groups.module';
 
 describe('CreateGroupComponent', () => {
   let component: CreateGroupComponent;
@@ -10,7 +11,7 @@ describe('CreateGroupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule, NgSelectModule],
+      imports: [HttpClientModule, NgSelectModule, ManageGroupsModule],
     }).compileComponents();
   });
 

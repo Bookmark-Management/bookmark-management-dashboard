@@ -19,15 +19,24 @@ export class BookmarkService {
     return this.http.post<TinyUrl>(`${this.baseService.getBaseUrl()}/api/v1/generate/tiny-url`, tinyUrlRequest);
   }
 
-  createTinyURLCard(): void {}
+  createTinyURLCard(card: any): Observable<any> {
+    return this.http.post<TinyUrl>(`${this.baseService.getBaseUrl()}/api/v1/generate/cards`, card);
+  }
 
   getGroupCards(): Observable<Card[]> {
     return this.http.get<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/fetch/group/cards`);
   }
 
-  createGroupCard(card: any): void {}
+  createGroupCard(card: any): Observable<any> {
+    return this.http.post<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/generate/group/cards`, card);
+  }
 
   getGroupDetails(cardId: any): Observable<Card> {
     return this.http.get<Card>(`http://localhost:3000/groupCards/${cardId}`);
+  }
+
+  addTinyURLCardToGroup(groupId: any, card: any): Observable<any> {
+    console.log(card);
+    return this.http.patch<Card[]>(`${this.baseService.getBaseUrl()}/api/v1/generate/group/cards/${groupId}`, card);
   }
 }

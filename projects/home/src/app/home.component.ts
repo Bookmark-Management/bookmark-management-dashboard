@@ -27,12 +27,16 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.cardsLoaded = false;
     this.showCards = true;
     this.zeroCards = true;
     this.zeroCardMessage = 'There is no tiny URLs available.';
-    this.cards = [];
+    this.getCards();
+  }
+
+  getCards(): void {
+    this.cardsLoaded = false;
     this.spinner.show();
+    this.cards = [];
     this.bookmarkService.getTinyUrlsCards().subscribe(
       (res: Card[]) => {
         this.spinner.hide();
@@ -56,5 +60,6 @@ export class HomeComponent implements OnInit {
 
   showCardsPage(): void {
     this.showCards = true;
+    this.getCards();
   }
 }

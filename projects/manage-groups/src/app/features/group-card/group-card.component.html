@@ -3,7 +3,7 @@
   <div class="container-fluid url-list">
     <div *ngIf="showGroup" class="row action-buttons">
       <button (click)="showPreviousPage()" type="button" class="box btn-box">Go Back</button>
-      <h2 class="w-50 d-flex justify-content-start">{{ group.groupName }}</h2>
+      <h3 class="w-50 d-flex justify-content-start">{{ group.title }}</h3>
       <div>
         <button (click)="open(tinyURLList)" type="button" class="box btn-box mr-3">Add existing tiny URL</button>
         <button (click)="createTinyURL()" type="button" class="box btn-box">Add new tiny URL</button>
@@ -12,15 +12,22 @@
 
     <div *ngIf="!showGroup" class="row action-buttons">
       <button (click)="showPreviousPage()" type="button" class="box btn-box">Go Back</button>
-      <h2 class="w-50 d-flex justify-content-start">{{ group.groupName }}</h2>
+      <h3 class="w-50 d-flex justify-content-start">{{ group.title }}</h3>
       <div class="w-25"></div>
     </div>
 
     <div *ngIf="showGroup" class="row group-det">
       <div class="w-100 mx-auto p-3">
-        <ng-container *ngFor="let card of group.tinyCards">
-          <create-cards [urlInfo]="card" [isGroup]="false"></create-cards>
+        <ng-container *ngIf="group.tinyCards?.length; else noCardExist">
+          <ng-container *ngFor="let card of group.tinyCards">
+            <create-cards [urlInfo]="card" [isGroup]="false"></create-cards>
+          </ng-container>
         </ng-container>
+        <ng-template #noCardExist>
+          <div class="w-50 h-300 p-5 d-flex justify-content-center align-items-center border mx-auto">
+            <h2>No card added to this group</h2>
+          </div>
+        </ng-template>
       </div>
     </div>
 

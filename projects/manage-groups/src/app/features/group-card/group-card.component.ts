@@ -16,7 +16,7 @@ export class GroupCardComponent implements OnInit {
   group: Card;
   showGroup: boolean;
   dropdownList: Card[];
-  selectedCard: Card[];
+  selectedCard: number[];
 
   constructor(
     private router: Router,
@@ -55,13 +55,27 @@ export class GroupCardComponent implements OnInit {
       this.dropdownList = res;
       this.modalService.open(content, { size: 'lg', backdrop: 'static', windowClass: 'popup' }).result.then(
         (result) => {
+          let tinyCards = this.group.tinyCards ? this.group.tinyCards : [];
+          this.selectedCard.forEach((id) => {
+            let td = [];
+            td = this.dropdownList.filter((c) => c.id === id);
+            tinyCards = tinyCards.length > 0 ? tinyCards.concat(td) : td;
+          });
           console.log('111', result);
-          // this.bookmarkService.addTinyURLToGroup(this.group.id, this.selectedCard)
-          //   .subscribe((res) => {
-          //     this.getGroupDetails();
-          //   })
+          this.bookmarkService.addTinyURLCardToGroup(this.group.id, { tinyCards }).subscribe(
+            (response: any) => {
+              console.log(response);
+              this.getGroupDetails();
+            },
+            (error) => {
+              this.toastr.error('Error', 'Unable to Fetch Group Cards');
+              this.logger.error('Unable to Fetch Group Cards', error);
+            }
+          );
         },
-        (resaon) => {}
+        (reason) => {
+          console.log('dismiss');
+        }
       );
     });
   }

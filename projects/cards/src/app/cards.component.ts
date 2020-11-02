@@ -26,6 +26,7 @@ export class CardsComponent implements OnInit {
   open(content): void {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
       (result) => {
+        console.log(result);
         if (this.isGroup) {
           // this.bookmarkService.deleteCardFromGroup()
           // .subscribe((res) => {
@@ -35,7 +36,7 @@ export class CardsComponent implements OnInit {
         }
       },
       (reason) => {
-        console.log('dismis');
+        console.log('dismiss');
       }
     );
   }

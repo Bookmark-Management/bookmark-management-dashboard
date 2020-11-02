@@ -26,4 +26,8 @@ export class BookmarkService {
   }
 
   createGroupCard(card: any): void {}
+
+  getGroupDetails(cardId: any): Observable<Card> {
+    return this.http.get<Card>(`http://localhost:3000/groupCards/${cardId}`);
+  }
 }

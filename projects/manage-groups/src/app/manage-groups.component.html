@@ -28,7 +28,7 @@
       <pagination-controls class="my-pagination" responsive="true" (pageChange)="currentPage = $event"> </pagination-controls>
     </div>
 
-    <div class="w-100">
+    <div class="w-100 px-3">
       <div class="url-lists">
         <ng-container *ngFor="let card of cards | paginate: { itemsPerPage: 12, currentPage: currentPage } | appFilter: searchText">
           <ng-container *ngIf="card != -1; else noCardExist">

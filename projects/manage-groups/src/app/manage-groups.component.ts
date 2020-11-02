@@ -31,6 +31,10 @@ export class ManageGroupsComponent implements OnInit {
     this.showCards = true;
     this.zeroCards = true;
     this.zeroCardMessage = 'There is no groups created yet';
+    this.getGroupCards();
+  }
+
+  getGroupCards(): void {
     this.cards = [];
     this.spinner.show();
     this.bookmarkService.getGroupCards().subscribe(
@@ -56,5 +60,6 @@ export class ManageGroupsComponent implements OnInit {
 
   showGroupsPage(): void {
     this.showCards = true;
+    this.getGroupCards();
   }
 }

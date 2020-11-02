@@ -14,9 +14,10 @@ import { CardsModule } from '../../../cards/src/app/cards.module';
 import { CustomPipeModule } from '../../../../src/app/shared/pipes/pipe.module';
 import { CreateGroupComponent } from './features/create-group/create-group.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { GroupCardComponent } from './features/group-card/group-card.component';
 
 @NgModule({
-  declarations: [ManageGroupsComponent, CreateGroupComponent],
+  declarations: [ManageGroupsComponent, CreateGroupComponent, GroupCardComponent],
   imports: [
     CommonModule,
     ManageGroupsRoutingModule,

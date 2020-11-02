@@ -1,0 +1,62 @@
+<section class="wrapper landing">
+  <!--  -->
+  <div class="container-fluid url-list">
+    <div *ngIf="showGroup" class="row action-buttons">
+      <button (click)="showPreviousPage()" type="button" class="box btn-box">Go Back</button>
+      <h2 class="w-50 d-flex justify-content-start">{{ group.groupName }}</h2>
+      <div>
+        <button (click)="open(tinyURLList)" type="button" class="box btn-box mr-3">Add existing tiny URL</button>
+        <button (click)="createTinyURL()" type="button" class="box btn-box">Add new tiny URL</button>
+      </div>
+    </div>
+
+    <div *ngIf="!showGroup" class="row action-buttons">
+      <button (click)="showPreviousPage()" type="button" class="box btn-box">Go Back</button>
+      <h2 class="w-50 d-flex justify-content-start">{{ group.groupName }}</h2>
+      <div class="w-25"></div>
+    </div>
+
+    <div *ngIf="showGroup" class="row group-det">
+      <div class="w-100 mx-auto p-3">
+        <ng-container *ngFor="let card of group.tinyCards">
+          <create-cards [urlInfo]="card" [isGroup]="false"></create-cards>
+        </ng-container>
+      </div>
+    </div>
+
+    <div *ngIf="!showGroup">
+      <app-card-generator [groupId]="group.id" (backToList)="backToGroup()"></app-card-generator>
+    </div>
+
+    <ngx-spinner bdColor="rgba(49,49,50,0.33)" size="medium" color="#ffffff" type="square-jelly-box" [fullScreen]="true"
+      ><p style="color: white">Loading...</p></ngx-spinner
+    >
+  </div>
+</section>
+
+<ng-template #tinyURLList let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title text-center w-100" id="modal-basic-title">Select and add tiny URL(s) to the Group</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Select tiny url(s)</label>
+      <ng-select
+        [items]="dropdownList"
+        bindLabel="title"
+        bindValue="id"
+        [multiple]="true"
+        placeholder="Select cities"
+        name="tinyUrlList"
+        [(ngModel)]="selectedCard"
+      >
+      </ng-select>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success w-25" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>

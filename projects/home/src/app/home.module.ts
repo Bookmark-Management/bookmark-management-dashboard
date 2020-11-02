@@ -30,7 +30,7 @@ import { CustomPipeModule } from '../../../../src/app/shared/pipes/pipe.module';
     NgxPaginationModule,
     CustomPipeModule.forRoot(),
   ],
-  exports: [HomeComponent, ZeroPageComponent],
+  exports: [HomeComponent, ZeroPageComponent, CardGeneratorComponent],
   providers: [BookmarkService],
 })
 export class HomeModule {}

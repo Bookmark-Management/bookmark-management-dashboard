@@ -35,6 +35,17 @@
 
 /* icons */
 
+.ico-delete {
+  background: url(../assets/images/ico-del.svg) no-repeat 0 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  z-index: 2;
+  cursor: pointer;
+}
+
 .ico-search {
   background: url(../assets/images/search-image.svg) no-repeat 0 0;
   width: 24px;
